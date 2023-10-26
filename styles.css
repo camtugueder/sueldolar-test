@@ -1,0 +1,562 @@
+@font-face {
+    font-family: 'AzoSans';
+    src: url("https://db.onlinewebfonts.com/t/d03165bd677535fe8da7479e26b13180.eot");
+    src: url("https://db.onlinewebfonts.com/t/d03165bd677535fe8da7479e26b13180.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/d03165bd677535fe8da7479e26b13180.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/d03165bd677535fe8da7479e26b13180.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/d03165bd677535fe8da7479e26b13180.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/d03165bd677535fe8da7479e26b13180.svg#Azo Sans Uber W01 Regular")format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Acumin';
+    src: url('fonts/AcuminVariableConcept.otf') format('opentype');
+    font-weight: auto;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: auto;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #DAC106;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "DM Sans", sans-serif;
+}
+
+.black {
+    color: black;
+}
+
+#header {
+    font-family: "AzoSans", sans-serif;
+    text-align: left;
+    margin-left: 20%;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#header img {
+    margin-right: 13px;
+}
+
+#main-header {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 34%;
+    height: 40%;
+    padding-top: 75px;
+    padding-left: 115px;
+}
+
+#main-header h1 {
+    align-self: flex-end;
+    width: min-content;
+    font-weight: normal;
+    font-size: 95px;
+    line-height: 77px;
+}
+
+main header {
+    font-family: "AzoSans", sans-serif;
+    padding: 0;
+    text-align: left;
+    color: white;
+}
+
+main header h1, main header h3 {
+    margin: 0;
+}
+
+main header h1 {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+main header h3 {
+    font-family: "Acumin";
+    font-weight: lighter;
+    font-size: 30px;
+    color: white;
+    text-align: right;
+    margin-top: 10px;
+}
+
+header, footer {
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Center the content vertically */
+    align-content: space-between;
+    background-size: cover;
+    background-position: center center;
+}
+
+@media (max-width: 1780px) {
+    main {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 95"><polygon points="0,0 100,0 100,64.33 0,77.67" fill="%238326EF"/><polygon points="0,77.67 100,64.33 100,95 0,95" fill="%23DAC106"/></svg>');
+    }
+}
+
+@media (min-width: 1781px) {
+    main {
+        flex: 1;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900"><polygon points="0,0 1200,0 1200,450 0,550" fill="%238326EF"/><polygon points="0,550 1200,450 1200,900 0,900" fill="%23DAC106"/></svg>');
+    }
+}
+
+.red-oval {
+    background-color: #C74613;
+    border-radius: 42px;
+    color: white;
+    padding: 25px;
+    font-size: 25px;
+    margin-bottom: 19px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#salario {
+    flex: 0 0 40%;
+    height: 40%;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-right: 71px;
+}
+
+#indices {
+    flex: 0 0 46%;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 115px;
+    margin-bottom: 124px;
+}
+
+.salario-content {
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+}
+
+#salario header {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+#salario .principios {
+    margin-top: 20px;
+    margin-bottom: 10px
+}
+
+
+#indices select {
+    font-family: 'Montserrat';
+    font-weight: 100;
+    color: white;
+    font-size: 32px;
+    padding-right: 30px;
+    margin-top: 10px;
+    width: 366px;
+    margin-right: 5px;
+    background-color: #C74613;
+    /* line-height: 50px; */
+    padding-bottom: 6px;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    appearance: none;
+    background-image: url(img/down-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 31px;
+}
+
+#indices select:focus {
+    background-image: url('img/up-arrow.svg'); /* Blue down arrow image when focused */
+}
+
+#indices select option {
+    font-weight: 100;
+}
+
+#indices .select-container {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+#indices .select-container .red-oval {
+    display: inline-block;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 36px;
+    margin-right: 18px;
+}
+
+#indices .select-container .red-oval.monto-peso {
+    margin-bottom: 10px;
+}
+
+#indices > header {
+    margin-bottom: 10px;
+    font-size: 46px;
+}
+
+.monto-input {
+    position: relative;
+    padding: 8px 15px 24px 24px;
+}
+
+.monto-peso {
+    font-family: 'Montserrat';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.monto-input .monto-peso {
+    position: absolute;
+    left: 28px;
+    top: 19px;
+}
+
+#salario input {
+    font-family: 'Montserrat';
+    margin-top: 10px;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid white;
+    outline: none;
+    padding-left: 37px;
+    padding-bottom: 5px;
+    -webkit-appearance: none;
+    font-size: 32px;
+    color: white;
+    width: 78%;
+}
+
+#salario input::placeholder {
+    color: white;
+    font-weight: 100;
+}
+
+.indice {
+    position: relative;
+    width: 100%;
+    height: 28px;
+    padding: 12px 0 8px 0;
+    margin-top: 10px;
+    background: #FAFAFA;
+    box-shadow: 0px 2px 2px rgba(52, 74, 251, 0.25), inset 0px 2px 0px #344AFB;
+    border-radius: 0px 0px 5px 5px;
+
+}
+
+.indice .peso {
+    position: absolute;
+    left: 10px;
+    color: #011082;
+}
+
+.indice .monto {
+    margin-left: 25px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+
+    color: #344AFB;
+}
+
+.indice .nombre {
+    position: absolute;
+    right: 21px;
+    color: #011082;
+}
+
+.fuente {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    color: black;
+    margin-left: 25px;
+}
+
+#devaluo {
+    display: flex;
+    flex: 0 0 40%;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    min-height: 350px;
+}
+
+#devaluo header {
+    font-size: 46px;
+    color: white;
+    margin-right: 157px;
+    margin-bottom: 32px;
+    min-width: 551px;
+}
+
+#porcentaje {
+    max-width: 100%;
+    font-family: 'AzoSans';
+    font-size: 330px;
+}
+
+#porcentaje div {
+    line-height: 302px;
+    overflow: hidden;
+    color: white;
+}
+
+/* Media query para hacer ajustes en tamaños de pantalla más pequeños */
+@media screen and (max-width: 1780px) {
+    main {
+        align-items: center;
+        min-width: 830px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        background-size: cover;
+        background-position: center center;
+    }
+    #main-header {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        height: auto;
+        flex: unset;
+    }
+
+    main-header h1 {
+
+    }
+
+    #salario {
+        height: auto;
+        flex: unset;
+        max-width: 100%;
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: unset;
+        align-self: unset;
+        margin: 0;
+    }
+
+    .ovals-container {
+        display: flex;
+        flex-direction: row;
+        width: 800px;
+        justify-content: space-between;
+    }
+
+    .ovals-container .red-oval {
+        flex: 1;
+    }
+
+    .ovals-container .monto-input {
+        margin-right: 22px;
+    }
+
+    .salario-content {
+        align-items: center;
+    }
+
+    #indices {
+        flex: unset;
+        width: 800px;
+        padding: 0;
+        margin-bottom: 13px;
+    }
+
+    #indices select {
+        width: 325px;
+    }
+
+    #indices > header {
+        font-size: 41px;
+    }
+
+    #devaluo {
+        width: 800px;
+        align-items: start;
+        flex: unset;
+    }
+
+    #porcentaje {
+        align-self: center;
+    }
+
+}
+
+/* Media query para hacer ajustes en tamaños de pantalla más pequeños */
+@media screen and (max-width: 800px) {
+
+    main {
+        max-width: 800px;
+        min-width: 500px;
+    }
+
+    main header h3 {
+        font-size: 20px;
+        margin-right: 33px;
+        margin-bottom: 70px;
+    }
+
+    #main-header h1 {
+        font-size: 53px;
+        line-height: 44px;
+        padding-top: 44px;
+    }
+
+    .ovals-container {
+        display: flex;
+        flex-direction: row;
+        width: 500px;
+        justify-content: space-between;
+        height: 68px;
+    }
+
+    .ovals-container .red-oval {
+        flex: 1;
+        padding-top: 8px;
+        margin-right: 27px;
+    }
+
+    .ovals-container .monto-input {
+        margin-right: 13px;
+        margin-left: 27px;
+    }
+
+    .monto-input {
+        padding: 5px 15px 8px 20px;
+    }
+
+    .monto-input .monto-peso {
+        top: 16px;
+        left: 22px;
+    }
+
+    .monto-peso {
+        font-size: 16px;
+    }
+
+    .monto-peso.actualizado {
+        margin-right: 16px;
+        margin-left: 16px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    #salario header {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+    #salario input {
+        font-size: 16px;
+        padding-left: 22px;
+        padding-bottom: 2px;
+        margin-top: 0;
+    }
+
+    .salario-content {
+        align-items: center;
+    }
+
+    #indices {
+        width: 500px;
+    }
+
+    #indices select {
+        width: 170px;
+        font-size: 16px;
+        margin-top: 0;
+        line-height: normal;
+        background-size: 19px;
+    }
+
+    #indices .select-container {
+        width: 481px;
+    }
+
+    #indices .select-container .red-oval {
+        padding-top: 3px;
+        padding-bottom: 11px;
+        padding-left: 19px;
+    }
+
+    #indices .select-container .red-oval:nth-child(1) {
+        margin-left: 15px;
+        margin-right: 12px;
+    }
+
+    #indices > header {
+        font-size: 24px;
+        padding-left: 23px;
+    }
+
+    .fuente {
+        font-size: 16px;
+        width: 400px;
+    }
+
+    #devaluo {
+        width: 500px;
+    }
+
+    #devaluo header {
+        font-size: 33px;
+        margin-left: 20px;
+        width: 400px;
+        margin-bottom: 0px;
+        min-width: auto;
+    }
+
+    #porcentaje {
+        font-size: 192px;
+        align-self: center;
+    }
+
+}
