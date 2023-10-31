@@ -33,7 +33,6 @@ html, body {
     height: 100%;
     width: 100%;
     min-height: 100vh; /* Ensure minimum height is always 100% of the viewport height */
-    min-width: 100vw;
     margin: 0;
     padding: 0;
     background-color: #DAC106;
@@ -181,12 +180,21 @@ main {
     align-self: flex-end;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 37px;
 }
 
 .ovals-container {
-    display: flex;
+    display: grid;
+    grid-template-areas:
+        "a b"
+        ". c";
+    grid-template-columns: max-content;
     flex-direction: row;
     width: 90vw;
+}
+
+.ovals-container .fuente {
+    grid-area: c;
 }
 
 .ovals-container .red-oval {
@@ -200,6 +208,7 @@ main {
 #salario header {
     font-size: 4vw;
     margin-bottom: 2vw;
+    align-self: start;
 }
 
 #salario .principios {
@@ -263,11 +272,17 @@ main {
 #indices > header {
     margin-bottom: calc(10px * var(--scale-factor));
     font-size: 4vw;
+    align-self: center;
 }
 
 .monto-input {
     position: relative;
     justify-content: center;
+    grid-area: a;
+}
+
+.dolar-anterior {
+    grid-area: b;
 }
 
 .monto-peso {
@@ -279,23 +294,23 @@ main {
 .monto-input .monto-peso {
     position: absolute;
     left: 4vw;
-    top:  2vw;
+    top: 2.1vw;
 }
 
 #salario input {
     font-family: 'Montserrat';
     font-size: 3vw;
-    margin-top:  1vw;
+    margin-top: 1vw;
     margin-bottom: 1vw;
     background: transparent;
     border: 0;
     border-bottom: 2px solid white;
     outline: none;
-    padding-left:  3vw;
-    padding-bottom:  1vw;
+    padding-left: 9vw;
+    padding-bottom: 1vw;
     -webkit-appearance: none;
     color: white;
-    width: 78%;
+    max-width: 67%;
 }
 
 #salario input::placeholder {
@@ -354,6 +369,16 @@ main {
     font-size: 2vw;
     color: black;
     margin-left: 1vw;
+    margin-top: 1vw;
+}
+
+.pobre {
+    align-self: end;
+    margin-bottom: 1vw;
+}
+
+.pobre .fuente {
+    margin-top: 0;
 }
 
 #devaluo {
@@ -378,7 +403,7 @@ main {
 }
 
 #porcentaje div {
-    line-height: 51vw;
+    line-height: 40vw;
     overflow: hidden;
     color: white;
 }

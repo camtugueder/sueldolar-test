@@ -12,54 +12,60 @@
                 <h1><span class="black">Calculadora</span> de&nbsp;&nbsp;salario actualizado</h1>
                 <h3><div>Conocé el valor correspondiente</div><div>al día de hoy según diferentes índices</div></h3>
             </header>
-                <div id="salario">
-                    <div class="salario-content">
-                        <header>Tu salario</header>
-                        <div class="ovals-container">
-                            <div class="monto-input red-oval">
-                                <span class="monto-peso">$</span>
-                                <input id="monto" type="text" placeholder="Ingresa monto" autocomplete="off" />
-                            </div>
-                            <div class="red-oval">
-                                <span id="blue-pasado" class="monto-peso">US$ 0.-</span>
-                            </div>
-                        </div>
+        <div id="indices">
+            <header>a principios de</header>
+            <div class="select-container">
+                <div class="red-oval">
+                    <select id="mes" name="mes">
+                        <option value="1">Enero</option>
+                        <option value="2">Febrero</option>
+                        <option value="3">Marzo</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Mayo</option>
+                        <option value="6">Junio</option>
+                        <option value="7">Julio</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Septiembre</option>
+                        <option selected value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                    </select>
+                </div>
+                <div class="red-oval">
+                    <select id="anio" name="anio">
+                        <option value="2022">2022</option>
+                        <option selected value="2023">2023</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id="salario">
+            <div class="salario-content">
+                <header>Tu salario era</header>
+                <div class="ovals-container">
+                    <div class="monto-input red-oval">
+                        <span class="monto-peso">ARS$</span>
+                        <input id="monto" type="text" placeholder="Ingresa monto" autocomplete="off" />
                     </div>
-                </div>
-                <div id="indices">
-                    <header>a principios de</header>
-                    <div class="select-container">
-                        <div class="red-oval">
-                            <select id="mes" name="mes">
-                                <option value="1">Enero</option>
-                                <option value="2">Febrero</option>
-                                <option value="3">Marzo</option>
-                                <option value="4">Abril</option>
-                                <option value="5">Mayo</option>
-                                <option value="6">Junio</option>
-                                <option value="7">Julio</option>
-                                <option value="8">Agosto</option>
-                                <option value="9">Septiembre</option>
-                                <option selected value="10">Octubre</option>
-                                <option value="11">Noviembre</option>
-                                <option value="12">Diciembre</option>
-                            </select>
-                        </div>
-                        <div class="red-oval">
-                            <select id="anio" name="anio">
-                                <option value="2022">2022</option>
-                                <option selected value="2023">2023</option>
-                            </select>
-                        </div>
+                    <div class="dolar-anterior red-oval">
+                        <span id="blue-pasado" class="monto-peso">US$ 0.-</span>
                     </div>
-                    <header>Actualizado hoy según índice</header>
-                    <div class="red-oval monto-peso actualizado"><span class="peso">US$</span><span id="blue-hoy" class="monto"> 0.-</span></div>
-                    <div class="fuente">Fuente: Lorem ipsum dolor sit amet consectetur adipiscing elit, eget netus sociis</div>
+                    <div class="fuente">En dólar blue</div>
                 </div>
-                <div id="devaluo">
-                    <header>Tu sueldo devaluó</header>
-                    <div id="porcentaje"><div id="porcentaje-monto">0%</div></div>
-                </div>
+            </div>
+            <header>Tu salario hoy</header>
+            <div class="red-oval monto-peso actualizado"><span class="peso">US$</span><span id="blue-hoy" class="monto"> 0.-</span></div>
+            <div class="fuente">En dólar blue</div>
+        </div>
+        <div id="devaluo">
+            <header>Sos un</header>
+            <div id="porcentaje"><div id="porcentaje-monto">0%</div></div>
+            <header class="pobre">
+                <div>más pobre</div>
+                <div class="fuente">Según indíces del INDEC</div>
+            </header>
+
+        </div>
     </main>
     <script src="js/sueldolar.js"></script>
 </body>
