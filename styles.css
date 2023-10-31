@@ -305,6 +305,7 @@ main {
     background: transparent;
     border: 0;
     border-bottom: 2px solid white;
+    border-radius: 0;
     outline: none;
     padding-left: 9vw;
     padding-bottom: 1vw;
@@ -367,7 +368,7 @@ main {
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
     font-size: 2vw;
-    color: black;
+    color: white;
     margin-left: 1vw;
     margin-top: 1vw;
 }
