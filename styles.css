@@ -294,7 +294,7 @@ main {
 .monto-input .monto-peso {
     position: absolute;
     left: 4vw;
-    top: 24%;
+    bottom: 32%;
 }
 
 #salario input {
